@@ -12,8 +12,8 @@ using mgmt.Database;
 namespace mgmt.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220215121712_Teams")]
-    partial class Teams
+    [Migration("20220215160253_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
