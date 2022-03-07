@@ -93,8 +93,8 @@ public class TeamsController : ControllerBase
     }
 
     [HttpPut]
-    [Route("/api/teams/teamlead/{id}")]
-    public async Task<Team> AddRole(string id, string teamlead)
+    [Route("/api/teams/{id}/teamlead/{idTeamLead}")]
+    public async Task<Team> changeTeamLead(string id, string idTeamLead)
     {
         var team = await _appDbContext.Teams.FirstOrDefaultAsync(t => t.Id == id);
         if (team is null)
@@ -102,7 +102,7 @@ public class TeamsController : ControllerBase
             throw new ArgumentException("Team not found!");
         }
 
-        var tmld = await _appDbContext.Users.FirstOrDefaultAsync(tl => tl.Id == teamlead);
+        var tmld = await _appDbContext.Users.FirstOrDefaultAsync(tl => tl.Id == idTeamLead);
         if (tmld is null)
         {
             throw new ArgumentException("Team Lead not found!");
