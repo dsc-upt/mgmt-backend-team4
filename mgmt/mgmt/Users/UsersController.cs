@@ -115,16 +115,15 @@ public class UsersController : ControllerBase
             throw new ArgumentException("User not found!");
         }
 
-        var roles = role.Split(",");//for delete
+        var rolesForDelete = role.Split(",");
         var oldRoles = user.Roles.Split(",");
         string newRoles = "";
-        foreach (var r in oldRoles.Except(roles))
+        foreach (var r in oldRoles.Except(rolesForDelete))
         {
             newRoles += (r + ",");
         }
 
-        user.Roles = newRoles;
-        user.Roles = user.Roles.Substring(0, user.Roles.Length - 1);
+        user.Roles = newRoles.Substring(0, newRoles.Length - 1);
         await _dbContext.SaveChangesAsync();
         return user;
     }
