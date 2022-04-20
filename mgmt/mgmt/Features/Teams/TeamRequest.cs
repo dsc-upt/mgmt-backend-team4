@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using mgmt.Users;
 
-namespace mgmt.Teams;
+namespace mgmt.Features.Teams;
 
 public class TeamRequest
 {

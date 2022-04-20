@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace mgmt.UserProfiles;
+namespace mgmt.Features.UserProfiles;
 
 [ApiController]
 [Route("api/userprofiles")]

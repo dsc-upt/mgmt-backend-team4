@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace mgmt.Clients;
+namespace mgmt.Features.Clients;
 
 [ApiController]
 [Route("api/clients")]

@@ -1,4 +1,4 @@
-﻿namespace mgmt;
+﻿namespace mgmt.Base;
 
 public class Entity
 {
