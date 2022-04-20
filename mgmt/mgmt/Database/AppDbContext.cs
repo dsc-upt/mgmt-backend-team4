@@ -1,7 +1,9 @@
-﻿using mgmt.Clients;
-using mgmt.Users;
-using mgmt.Teams;
-using mgmt.UserProfiles;
+﻿using mgmt.Features.Clients;
+using mgmt.Features.Projects;
+using mgmt.Features.Teams;
+using mgmt.Features.UserProfiles;
+using mgmt.Features.Users;
+using mgmt.Features.Workshops;
 using Microsoft.EntityFrameworkCore;
 namespace mgmt.Database;
 public class AppDbContext:DbContext
@@ -16,4 +18,8 @@ public class AppDbContext:DbContext
     public DbSet<UserProfile> UserProfiles { get; set; }
     
     public DbSet<Client> Clients { get; set; }
+    
+    public DbSet<Project> Projects { get; set; }
+    
+    public DbSet<Workshop> Workshops { get; set; }
 }

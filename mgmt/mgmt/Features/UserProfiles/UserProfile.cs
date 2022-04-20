@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using mgmt.Teams;
-using mgmt.Users;
+using mgmt.Base;
+using mgmt.Features.Teams;
+using mgmt.Features.Users;
 
-namespace mgmt.UserProfiles;
+namespace mgmt.Features.UserProfiles;
 
 public class UserProfile : Entity
 {

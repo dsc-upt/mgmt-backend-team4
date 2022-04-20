@@ -1,9 +1,8 @@
 ﻿using mgmt.Database;
-using mgmt.Users;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace mgmt.Teams;
+namespace mgmt.Features.Teams;
 
 [ApiController]
 [Route("api/teams")]

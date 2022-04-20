@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using mgmt.Users;
+using mgmt.Base;
+using mgmt.Features.Users;
 
-namespace mgmt.Clients;
+namespace mgmt.Features.Clients;
 
-public class ClientRequest
+public class Client : Entity
 {
     [Required] public string Name { get; set; }
     
-    [Required] public string ContactPerson { get; set; }
+    [Required] public User ContactPerson { get; set; }
     
     [Required] [EmailAddress] public string Email { get; set; }
     

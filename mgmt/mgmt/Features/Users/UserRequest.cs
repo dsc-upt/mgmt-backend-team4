@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace mgmt.Users;
+namespace mgmt.Features.Users;
 
 public class UserRequest
 {
@@ -11,7 +11,7 @@ public class UserRequest
     public string LastName { get; set; }
     
     [Required]
-    public string Roles { get; set; }
+    public List<string> Roles { get; set; }
     
     [Required]
     [EmailAddress]

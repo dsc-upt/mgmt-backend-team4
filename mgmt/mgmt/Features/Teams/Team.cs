@@ -1,6 +1,7 @@
-﻿using mgmt.Users;
+﻿using mgmt.Base;
+using mgmt.Features.Users;
 
-namespace mgmt.Teams;
+namespace mgmt.Features.Teams;
 
 public class Team : Entity
 {
